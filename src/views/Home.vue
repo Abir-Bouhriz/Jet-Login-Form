@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content>
+    <v-main>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-col cols="12" sm="8" md="8">
@@ -24,19 +24,19 @@
                         </div>
                         <h4 class="text-center mt-4">Ensure your email for registration</h4>
                         <v-form>
-                          <v-text-field label="Email" name="Email" prepend-icon="email" type="text" color="teal accent-3"/>
+                          <v-text-field label="Email" name="Email" prepend-icon="email" type="email" color="teal accent-3"/>
                           <v-text-field id="password" label="Password" name="Password" prepend-icon="lock" type="password" color="teal accent-3"/>
                         </v-form>
                         <h3 class="text-center mt-3">Forget your password ?</h3>
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <v-btn rounded dark class="teal accent-3">SIGN IN</v-btn>
+                        <v-btn @click="login" rounded dark class="teal accent-3 mb-3">SIGN IN</v-btn>
                       </div>
                     </v-col>
                     <v-col cols="12" md="4" class="teal accent-3">
                       <v-card-text class="white--text mt-12">
                         <h1 class="text-center display-1">Hello, Friends !</h1>
-                        <h5 class="text-cenetr">Enter your personnel details and start journay with us</h5>
+                        <h5 class="text-center">Enter your personnel details and start journay with us</h5>
                       </v-card-text>
                       <div class="text-center">
                         <v-btn rounded dark outlined @click="step++">SIGN UP</v-btn>
@@ -72,12 +72,12 @@
                         <h4 class="text-center mt-4">Ensure your email for registration</h4>
                         <v-form>
                           <v-text-field label="Name" name="Name" prepend-icon="person" type="text" color="teal accent-3" />
-                          <v-text-field label="Email" name="Email" prepend-icon="email" type="text" color="teal accent-3" />
+                          <v-text-field label="Email" name="Email" prepend-icon="email" type="email" color="teal accent-3" />
                           <v-text-field label="Password" name="Password" prepend-icon="lock" type="password" color="teal accent-3"/>
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5">
-                        <v-btn rounded dark class="teal accent-3">SIGN UP</v-btn>
+                        <v-btn @click="signUp" rounded dark class="teal accent-3 mb-3">SIGN UP</v-btn>
                       </div>
                     </v-col>
                   </v-row>
@@ -88,18 +88,52 @@
         </v-row>
 
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
   
 </template>
 
 <script>
+import firebase from "firebase";
+
 export default {
-  data: () => ({
-    step: 1
-  }),
-  props: {
-    source: String
+  name: "Home",
+  data() {
+    return{
+      step:1,
+      email: "",
+      password:""
+    };
+  },
+  methods: {
+    login: function() {
+      //log the user in
+      firebase
+      .auth()
+      .signInWithEmailAndPassword(this.email, this.password)
+      .then(
+        user => {
+          console.log(user.data)
+        },
+        err => {
+          alert(err);
+        }
+      );
+    },
+    signUp: function() {
+      //log the user in
+      firebase
+      .auth()
+      .createUserWithEmailAndPassword(this.email, this.password)
+      .then(
+        user => {
+          console.log(user.data)
+        },
+        err => {
+          alert(err);
+        }
+      );
+    }
   }
 }
 </script>
