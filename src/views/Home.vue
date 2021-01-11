@@ -55,6 +55,22 @@
                         <v-btn rounded dark outlined @click="step--">SIGN IN</v-btn>
                       </div>
                     </v-col>
+                    <v-col cols="12" md="8">
+                      <v-card-text class="mt-12">
+                        <h1 class="text-center display-2 teal--text text--accent-3">Create Account</h1>
+                        <div class="text-center mt-4">
+                          <v-btn class="mx-2" fab color="black" outlined>
+                            <v-icon>facebook</v-icon>
+                          </v-btn>
+                          <v-btn class="mx-2" fab color="black" outlined>
+                            <v-icon>mdi-google</v-icon>
+                          </v-btn>
+                          <v-btn class="mx-2" fab color="black" outlined>
+                            <v-icon>mdi-linkedin</v-icon>
+                          </v-btn>
+                        </div>
+                      </v-card-text>
+                    </v-col>
                   </v-row>
                 </v-window-item>
               </v-window>
