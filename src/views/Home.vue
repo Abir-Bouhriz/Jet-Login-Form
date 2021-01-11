@@ -69,7 +69,16 @@
                             <v-icon>mdi-linkedin</v-icon>
                           </v-btn>
                         </div>
+                        <h4 class="text-center mt-4">Ensure your email for registration</h4>
+                        <v-form>
+                          <v-text-field label="Name" name="Name" prepend-icon="person" type="text" color="teal accent-3" />
+                          <v-text-field label="Email" name="Email" prepend-icon="email" type="text" color="teal accent-3" />
+                          <v-text-field label="Password" name="Password" prepend-icon="lock" type="password" color="teal accent-3"/>
+                        </v-form>
                       </v-card-text>
+                      <div class="text-center mt-n5">
+                        <v-btn rounded dark class="teal accent-3">SIGN UP</v-btn>
+                      </div>
                     </v-col>
                   </v-row>
                 </v-window-item>
