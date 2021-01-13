@@ -8,9 +8,9 @@ This is my third challenge (One week challenge), made with [Vuetify](https://vue
 
 ## ScreenShots:
 
-<img src="screenshots/1.png" />
-<img src="screenshots/2.png" />
-<img src="screenshots/3.png" />
+<img src="screenshots/1.png" width="500"/>
+<img src="screenshots/2.png" width="500"/>
+<img src="screenshots/3.png" width="500"/>
 
 ## Challenges:
 * [Day 1: Jet-Spectre](https://github.com/Abir-Bouhriz/Spectre-Clone)
