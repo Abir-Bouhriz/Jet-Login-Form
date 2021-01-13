@@ -23,8 +23,8 @@
                           </v-btn>
                         </div>
                         <v-form class="mt-4">
-                          <v-text-field label="Email" name="Email" prepend-icon="email" type="email" color="#01579B"></v-text-field>
-                          <v-text-field id="password" label="Password" name="Password" prepend-icon="lock" type="password" color="#01579B"></v-text-field>
+                          <v-text-field label="Email" name="Email" prepend-icon="email" type="email" color="#01579B" v-model="email"></v-text-field>
+                          <v-text-field id="password" label="Password" name="Password" prepend-icon="lock" type="password" color="#01579B" v-model="password" ></v-text-field>
                         </v-form>
                         <h3 class="text-center mt-3">Forget your password ?</h3>
                       </v-card-text>
@@ -69,9 +69,9 @@
                           </v-btn>
                         </div>
                         <v-form class="mt-4">
-                          <v-text-field label="Name" name="Name" prepend-icon="person" type="text" color="#01579B" ></v-text-field>
-                          <v-text-field label="Email" name="Email" prepend-icon="email" type="email" color="#01579B" ></v-text-field>
-                          <v-text-field label="Password" name="Password" prepend-icon="lock" type="password" color="#01579B"></v-text-field>
+                          <v-text-field label="Name" name="Name" prepend-icon="person" type="text" color="#01579B"  ></v-text-field>
+                          <v-text-field label="Email" name="Email" prepend-icon="email" type="email" color="#01579B" v-model="email"></v-text-field>
+                          <v-text-field label="Password" name="Password" prepend-icon="lock" type="password" color="#01579B" v-model="password"></v-text-field>
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5">
@@ -92,15 +92,15 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import * as firebase from "firebase";
 
 export default {
   name: "Home",
   data() {
     return{
       step:1,
-      email: "",
-      password:""
+      email:this.email,
+      password:this.password
     };
   },
   methods: {
@@ -118,13 +118,14 @@ export default {
         }
       );
     },
-    signUp: function() {
-      //log the user in
+    async signUp() {
+      console.log(this.email)
       firebase
       .auth()
       .createUserWithEmailAndPassword(this.email, this.password)
       .then(
         user => {
+          console.log("hello")
           console.log(user.data)
         },
         err => {

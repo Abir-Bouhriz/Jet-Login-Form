@@ -3,8 +3,7 @@ import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from 'firebase';
 
 Vue.config.productionTip = false
 
