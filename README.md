@@ -1,4 +1,29 @@
-# challenge-4
+# Jet-Login-Form
+
+![GitHub license](https://img.shields.io/github/license/Mohammed-Benotmane/Tower-Defense-Game.svg)
+![Jetlight studio](https://img.shields.io/badge/Made%20by-Jetlight%20studio-blue.svg?color=082544)
+
+## Description:
+This is my third challenge (One week challenge), made with [Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/). It is a login form with Firebase Authentication. 
+
+## ScreenShots:
+
+<img src="screenshots/1.png" />
+
+## Challenges:
+* [Day 1: Jet-Spectre](https://github.com/Abir-Bouhriz/Spectre-Clone)
+* [Day 2: Vue-Calender](https://github.com/Abir-Bouhriz/Vue-Calender)
+* [Day 3: Jet-Login-Form](https://github.com/Abir-Bouhriz/Jet-Login-Form)
+
+## Tools & languages:
+* Vue.js (front end JavaScript framework)
+* Vuetify (Material Design component framework)
+* HTML
+* CSS
+* JavaScript
+* Visual Studio Code ( Text editor )
+* paint.net ( image editor)
+
 
 ## Project setup
 ```
@@ -22,3 +47,10 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Contribution:
+Feel free to fork this project and add whatever you like. If you have any suggestions or any comments please feel free to contact me or to open an issue.
+
+## Team:
+[Jetlighters](https://github.com/JetLightStudio) having fun.
+
