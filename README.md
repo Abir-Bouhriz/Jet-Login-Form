@@ -24,7 +24,6 @@ This is my third challenge (One week challenge), made with [Vuetify](https://vue
 * CSS
 * JavaScript
 * Visual Studio Code ( Text editor )
-* paint.net ( image editor)
 
 
 ## Project setup
