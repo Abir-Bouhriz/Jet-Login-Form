@@ -10,6 +10,7 @@ This is my third challenge (One week challenge), made with [Vuetify](https://vue
 
 <img src="screenshots/1.png" />
 <img src="screenshots/2.png" />
+<img src="screenshots/3.png" />
 
 ## Challenges:
 * [Day 1: Jet-Spectre](https://github.com/Abir-Bouhriz/Spectre-Clone)
