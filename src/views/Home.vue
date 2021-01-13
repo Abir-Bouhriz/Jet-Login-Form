@@ -99,8 +99,8 @@ export default {
   data() {
     return{
       step:1,
-      email:this.email,
-      password:this.password
+      email:"",
+      password:""
     };
   },
   methods: {
@@ -118,7 +118,7 @@ export default {
         }
       );
     },
-    async signUp() {
+    signUp: function() {
       console.log(this.email)
       firebase
       .auth()
