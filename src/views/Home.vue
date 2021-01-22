@@ -92,7 +92,7 @@
 </template>
 
 <script>
-import * as firebase from "firebase";
+import firebase from "firebase";
 
 export default {
   name: "Home",
@@ -125,7 +125,6 @@ export default {
       .createUserWithEmailAndPassword(this.email, this.password)
       .then(
         user => {
-          console.log("hello")
           console.log(user.data)
         },
         err => {
